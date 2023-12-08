@@ -32,3 +32,30 @@ This repository contains an advanced Bash script designed for conducting digital
 
 ## Security and Privacy
 - The script compresses and encrypts the output data. Replace `YOUR_PASSPHRASE` in the script with a secure passphrase of your choice. Ensure you handle and store the collected data responsibly, adhering to relevant laws and regulations.
+
+## Linux Distribution Compatibility
+
+The advanced digital forensics Bash script is designed to be compatible with most major Linux distributions. Below is a breakdown of compatibility across different types of distributions:
+
+### Debian-based distributions (e.g., Ubuntu, Linux Mint)
+- Utilizes `apt` for listing installed packages, which is specific to Debian-based systems.
+- Most other commands (like `ifconfig`, `netstat`, `lspci`, `lshw`, `dmidecode`) are generally available or can be easily installed.
+
+### Red Hat-based distributions (e.g., Fedora, CentOS, RHEL)
+- Includes `rpm -qa` for listing installed RPM packages, catering to Red Hat-based systems.
+- Other commands are typically available, but installation of certain tools might be necessary if they are not present by default.
+
+### Arch Linux and derivatives (e.g., Manjaro)
+- The script does not include a specific command for `pacman`, but this can be added (`write_output "pacman -Q" "pacman_installed_packages.txt"`).
+- Other commands should function as expected, assuming necessary tools are installed.
+
+### Other distributions
+- Compatibility depends on the availability of specific tools and commands used in the script.
+- Modifications may be needed based on the distribution's package management system and available utilities.
+
+### Additional Notes
+- The script uses traditional networking tools like `ifconfig` and `netstat`. Some newer distributions might prefer `ip` and `ss`, requiring modifications to those commands.
+- Root access is generally required for many of the script's operations.
+- It is recommended to test the script in a controlled environment on your specific distribution to ensure compatibility and make any necessary adjustments.
+
+In summary, while the script should work on most major Linux distributions with minimal modifications, slight adjustments may be required for specific distributions, particularly those not based on Debian or Red Hat.
