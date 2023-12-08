@@ -20,6 +20,8 @@ This repository contains an advanced Bash script designed for conducting digital
 
 1. **Set Permissions**: Ensure the script is executable:
    ```bash
+   sudo apt-get install util-linux  # For Debian/Ubuntu
+   sudo yum install util-linux  # For CentOS/RHEL
    chmod +x DFLinux.sh
    sudo ./DFLinux.sh
    ```
