@@ -5,7 +5,7 @@ This repository contains an advanced Bash script designed for conducting digital
 ## Features
 
 - **System Information**: Collects basic system information including uptime, startup time, and hardware clock readouts.
-- **Operating System Details**: Extracts information about the operating system installation, including installer logs and file system details.
+- **Operating System Details**: Extract information about the operating system installation, including installer logs and file system details.
 - **Network Information**: Gathers network configuration, IP addresses, and network interface details.
 - **Installed Programs**: Lists all installed packages using both `rpm` and `apt`.
 - **Hardware Information**: Retrieves detailed information about PCI devices, hardware summaries, and BIOS data.
@@ -20,15 +20,15 @@ This repository contains an advanced Bash script designed for conducting digital
 
 1. **Set Permissions**: Ensure the script is executable:
    ```bash
-   chmod +x digital_forensics_script.sh
-   sudo ./digital_forensics_script.sh
+   chmod +x DFLinux.sh
+   sudo ./DFLinux.sh
    ```
    Output: Check the specified output directory for the collected data.
 
 ## Requirements
 - The script is intended for use on Linux systems.
-- Ensure you have the necessary permissions to execute the script and access system files.
+- Please make sure you have the necessary permissions to execute the script and access system files.
 - Required tools: dump, gpg, netstat, ifconfig, lshw, dmidecode, etc., should be installed.
 
 ## Security and Privacy
-- The script compresses and encrypts the output data. Replace `YOUR_PASSPHRASE` in the script with a secure passphrase of your choice. Ensure that you handle and store the collected data responsibly, adhering to relevant laws and regulations.
+- The script compresses and encrypts the output data. Replace `YOUR_PASSPHRASE` in the script with a secure passphrase of your choice. Ensure you handle and store the collected data responsibly, adhering to relevant laws and regulations.
