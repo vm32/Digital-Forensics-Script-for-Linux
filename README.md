@@ -10,7 +10,7 @@ This repository contains an advanced Bash script designed for conducting digital
 - **Installed Programs**: Lists all installed packages using both `rpm` and `apt`.
 - **Hardware Information**: Retrieves detailed information about PCI devices, hardware summaries, and BIOS data.
 - **System Logs**: Captures system journal logs and the contents of the `/var/log` directory.
-- **User Data**: Extracts user-specific data like recently used files and bash command history.
+- **User Data**: Extracts user-specific data like recently used files and bash command history and zsh command history.
 - **Memory Dump**: Performs a memory dump for detailed analysis.
 - **Process Information**: Captures information about current running processes.
 - **User Login History**: Records user login history and scheduled tasks.

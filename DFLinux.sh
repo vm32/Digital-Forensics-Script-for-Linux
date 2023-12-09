@@ -53,11 +53,19 @@ write_output "ls -lah /var/log/" "var_log_directory_listing.txt"
 
 for user_home in /home/*; do
     username=$(basename "$user_home")
+    
     if [ -f "$user_home/.bash_history" ]; then
         write_output "cat $user_home/.bash_history" "bash_command_history_$username.txt"
     else
         echo "No .bash_history for $username" >> "$output_dir/bash_command_history_$username.txt"
     fi
+    
+    if [ -f "$user_home/.zsh_history" ]; then
+        write_output "cat $user_home/.zsh_history" "zsh_command_history_$username.txt"
+    else
+        echo "No .zsh_history for $username" >> "$output_dir/zsh_command_history_$username.txt"
+    fi
+    
     write_output "cat $user_home/.local/share/recently-used.xbel" "recently_used_files_$username.txt"
 done
 
