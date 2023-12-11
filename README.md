@@ -60,4 +60,8 @@ The advanced digital forensics Bash script is designed to be compatible with mos
 - Root access is generally required for many of the script's operations.
 - It is recommended to test the script in a controlled environment on your specific distribution to ensure compatibility and make any necessary adjustments.
 
+# Output 
+
+![Screenshot_44](https://github.com/vm32/Digital-Forensics-Script-for-Linux/assets/21219411/1cec4fec-f57f-4cc4-9a0f-bb2a98e5d807)
+
 In summary, while the script should work on most major Linux distributions with minimal modifications, slight adjustments may be required for specific distributions, particularly those not based on Debian or Red Hat.
