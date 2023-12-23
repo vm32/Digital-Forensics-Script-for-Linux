@@ -62,6 +62,7 @@ The advanced digital forensics Bash script is designed to be compatible with mos
 
 # Output 
 You can see the results of this script in `/tmp/ExtractedInfo/` 
+`/tmp` is a standard temporary directory in Linux, used for storing temporary files. It is chosen because it is generally writable by all users and is cleared on reboot, which suits temporary data storage 
 ![Screenshot_44](https://github.com/vm32/Digital-Forensics-Script-for-Linux/assets/21219411/1cec4fec-f57f-4cc4-9a0f-bb2a98e5d807)
 
 In summary, while the script should work on most major Linux distributions with minimal modifications, slight adjustments may be required for specific distributions, particularly those not based on Debian or Red Hat.
