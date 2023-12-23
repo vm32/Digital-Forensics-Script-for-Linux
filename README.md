@@ -65,3 +65,6 @@ You can see the results of this script in `/tmp/ExtractedInfo/`
 ![Screenshot_44](https://github.com/vm32/Digital-Forensics-Script-for-Linux/assets/21219411/1cec4fec-f57f-4cc4-9a0f-bb2a98e5d807)
 
 In summary, while the script should work on most major Linux distributions with minimal modifications, slight adjustments may be required for specific distributions, particularly those not based on Debian or Red Hat.
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=vm32/Digital-Forensics-Script-for-Linux&type=Date)](https://star-history.com/#vm32/Digital-Forensics-Script-for-Linux&Date)
