@@ -75,7 +75,7 @@ else
     echo "No crontab for root" >> "$output_dir/scheduled_cron_jobs_root.txt"
 fi
 
-tar -czf "$output_dir/user_data.tar.gz" $output_dir/*.txt --remove-files
+$(cd $output_dir && tar -czf $output_dir/user_data.tar.gz *.txt --remove-files)
 
 echo "Data extraction complete. Check the $output_dir directory for output." >> "$logfile"
 echo "Forensic data extraction completed at $(date)" >> "$logfile"
