@@ -4,12 +4,12 @@ This repository contains an advanced Bash script designed for conducting digital
 
 ## Features
 
-- **System Information**: Collects basic system information including uptime, startup time, and hardware clock readouts.
+- **System Information**: Collects basic system information including uptime, startup time, hardware clock readouts, environment variables, and many more.
 - **Operating System Details**: Extract information about the operating system installation, including installer logs and file system details.
 - **Network Information**: Gathers network configuration, IP addresses, and network interface details.
-- **Installed Programs**: Lists all installed packages using both `rpm` and `apt`.
+- **Installed Programs**: Lists all installed packages using both `rpm` and `dpkg`.
 - **Hardware Information**: Retrieves detailed information about PCI devices, hardware summaries, and BIOS data.
-- **System Logs**: Captures system journal logs and the contents of the `/var/log` directory.
+- **System Logs**: Captures system journal logs, authentication logs, syslog and the contents of the `/var/log` directory.
 - **User Data**: Extracts user-specific data like recently used files and bash command history and zsh command history.
 - **Memory Dump**: Performs a memory dump for detailed analysis.
 - **Process Information**: Captures information about current running processes.
@@ -20,9 +20,9 @@ This repository contains an advanced Bash script designed for conducting digital
 
 1. **Set Permissions**: Ensure the script is executable:
    ```bash
-   sudo apt-get install util-linux  # For Debian/Ubuntu
-   sudo yum install util-linux  # For CentOS/RHEL
-   chmod +x DFLinux.sh
+   git clone https://github.com/vm32/Digital-Forensics-Script-for-Linux
+   cd Digital-Forensics-Script-for-Linux
+   chmod +x DFLinux.sh avml
    sudo ./DFLinux.sh
    ```
    Output: Check the specified output directory for the collected data.
@@ -30,7 +30,7 @@ This repository contains an advanced Bash script designed for conducting digital
 ## Requirements
 - The script is intended for use on Linux systems.
 - Please make sure you have the necessary permissions to execute the script and access system files.
-- Required tools: dump, gpg, netstat, ifconfig, lshw, dmidecode, etc., should be installed.
+- The scripts requires certain additional packages for proper extraction. You will be asked for installing the additional dependencies on the execution of script.
 
 ## Security and Privacy
 - The script compresses and encrypts the output data. Replace `YOUR_PASSPHRASE` in the script with a secure passphrase of your choice. Ensure you handle and store the collected data responsibly, adhering to relevant laws and regulations.
@@ -40,12 +40,10 @@ This repository contains an advanced Bash script designed for conducting digital
 The advanced digital forensics Bash script is designed to be compatible with most major Linux distributions. Below is a breakdown of compatibility across different types of distributions:
 
 ### Debian-based distributions (e.g., Ubuntu, Linux Mint)
-- Utilizes `apt` for listing installed packages, which is specific to Debian-based systems.
-- Most other commands (like `ifconfig`, `netstat`, `lspci`, `lshw`, `dmidecode`) are generally available or can be easily installed.
+- Utilizes `dpkg` for listing installed packages, which is specific to Debian-based systems.
 
 ### Red Hat-based distributions (e.g., Fedora, CentOS, RHEL)
 - Includes `rpm -qa` for listing installed RPM packages, catering to Red Hat-based systems.
-- Other commands are typically available, but installation of certain tools might be necessary if they are not present by default.
 
 ### Arch Linux and derivatives (e.g., Manjaro)
 - The script does not include a specific command for `pacman`, but this can be added (`write_output "pacman -Q" "pacman_installed_packages.txt"`).
@@ -60,10 +58,9 @@ The advanced digital forensics Bash script is designed to be compatible with mos
 - Root access is generally required for many of the script's operations.
 - It is recommended to test the script in a controlled environment on your specific distribution to ensure compatibility and make any necessary adjustments.
 
-# Output 
-You can see the results of this script in `/tmp/ExtractedInfo/` 
-`/tmp` is a standard temporary directory in Linux, used for storing temporary files. It is chosen because it is generally writable by all users and is cleared on reboot, which suits temporary data storage 
-![Screenshot_44](https://github.com/vm32/Digital-Forensics-Script-for-Linux/assets/21219411/1cec4fec-f57f-4cc4-9a0f-bb2a98e5d807)
+# Output
+You can see the results of this script in `/tmp/ExtractedInfo/`
+`/tmp` is a standard temporary directory in Linux, used for storing temporary files. It is chosen because it is generally writable by all users and is cleared on reboot, which suits temporary data storage.
 
 In summary, while the script should work on most major Linux distributions with minimal modifications, slight adjustments may be required for specific distributions, particularly those not based on Debian or Red Hat.
 ## Star History
